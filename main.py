@@ -29,7 +29,7 @@ async def start_handler(_, event: Message):
                                 caption=Config.START_MSG.format(event.from_user.mention),
                                 reply_markup=InlineKeyboardMarkup([
                                     [InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
-                                     InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup")],
+                                     InlineKeyboardButton("Our Group", url="https://t.me/MovieRequestGroup_123")],
                                     [InlineKeyboardButton("Help", callback_data="Help_msg"),
                                      InlineKeyboardButton("About", callback_data="About_msg")]]))
 
