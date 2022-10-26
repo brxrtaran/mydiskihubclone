@@ -1,4 +1,4 @@
-# (c) @RoyalKrrishna
+# (c) @brxrtaran
 
 from configs import Config
 from pyrogram import Client, filters, idle
@@ -38,8 +38,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
-             InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/TheatrePOP_updates"),
+             InlineKeyboardButton("Our Group", url="https://t.me/TheatrePOPMovieGroup"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
