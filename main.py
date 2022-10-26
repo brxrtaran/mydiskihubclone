@@ -28,8 +28,8 @@ async def start_handler(_, event: Message):
 	await event.reply_photo("https://telegra.ph/file/08ce29db269b279061d94.jpg",
                                 caption=Config.START_MSG.format(event.from_user.mention),
                                 reply_markup=InlineKeyboardMarkup([
-                                    [InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
-                                     InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup")],
+                                    [InlineKeyboardButton("Our Channel", url="https://t.me/TheatrePOP_updates"),
+                                     InlineKeyboardButton("Our Group", url="https://t.me/TheatrePOPMovieGroup")],
                                     [InlineKeyboardButton("Help", callback_data="Help_msg"),
                                      InlineKeyboardButton("About", callback_data="About_msg")]]))
 
@@ -48,7 +48,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-    answers = f'**📂 Results For ➠ {event.text} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
+    answers = f'**📂 Results For ➠ {event.text} \n\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n➠ Type Only Movie Name With Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n**'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -77,11 +77,11 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies"),
-						InlineKeyboardButton("Our Group", url="https://t.me/iPopcornMovieGroup")
+						InlineKeyboardButton("Our Channel", url="https://t.me/TheatrePOP_updates"),
+						InlineKeyboardButton("Our Group", url="https://t.me/TheatrePOPMovieGroup")
 					],
 					[
-						InlineKeyboardButton("Developer", url="https://t.me/RoyalKrrishna"),
+						InlineKeyboardButton("Developer", url="https://t.me/brxrtaran"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -96,10 +96,10 @@ async def button(bot, cmd: CallbackQuery):
 				[
 					[
 						InlineKeyboardButton("About", callback_data="About_msg"),
-						InlineKeyboardButton("Our Channel", url="https://t.me/iP_Movies")
+						InlineKeyboardButton("Our Channel", url="https://t.me/TheatrePOP_updates")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/RoyalKrrishna"),
+						InlineKeyboardButton("Owner", url="https://t.me/brxrtaran"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -117,8 +117,8 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("About", callback_data="About_msg")
 					],
 					[
-						InlineKeyboardButton("Support", url="https://t.me/RoyalKrrishna"),
-						InlineKeyboardButton("Channel", url="https://t.me/iP_Movies")
+						InlineKeyboardButton("Support", url="https://t.me/brxrtaran"),
+						InlineKeyboardButton("Channel", url="https://t.me/TheatrePOP_updates")
 					]
 				]
 			),
